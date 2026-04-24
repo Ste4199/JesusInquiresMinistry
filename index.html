@@ -657,7 +657,9 @@
     <section id="gallery">
         <div class="gallery-container">
             <div class="slider">
-                <img src="
+                <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Baptism.jpg?raw=true" class="slide active">
+                <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Children bible study.jpg?raw=true" class="slide">
+            </div>
 
 <!-- DONATE -->
 <section id="donate">
@@ -791,5 +793,27 @@
   });
   
 </script>
+            <script>
+                let slides=document.querySelectorAll(".alide");
+                let index=0;
+
+                function showSlide(i) {
+                    slides.forEach(slide=>slide.classList.remove("active"));
+                    slide[i].classLis.add("add");
+                }
+
+                function nextSlide() {
+                    index=(index+1)% slides.length;
+                    showSlide(index);
+                }
+
+                function prevSlide() {
+                    index=(index-1+slides.length)% slides.length;
+                    showSlide(index);
+                }
+                // Auto slideshow every 1 second
+                setInterval(nextSlide,1000);
+            </script>
+    
 </body>
 </html>
