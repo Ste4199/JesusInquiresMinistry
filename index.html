@@ -312,6 +312,42 @@
   }
   .event-link:hover { gap: 10px; }
 
+   /*--Gallery--*/
+   .gallery container { 
+       position: relative;
+       width:80%;
+       height:400px;
+       margin: auto;
+       background: #000;
+   }
+    .slider {
+        width:100%;
+        height:100%;
+        position:relative;
+    }
+        .slide {
+            position:absolute;
+            width:100%;
+            height:100%;
+            object-fit:contain; /*shows full image*/
+            display:none;
+        }
+        .active{
+            display:block;
+        }
+        buttons {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            background:rgba(0,0,0,0.5);
+            color:white;
+            border:none;
+            padding:10px;
+            cursor:pointer;
+        }
+        .prev{left:10px;}
+        .next{right:10px;}
+
   /* ── DONATE ── */
   #donate {
     background: linear-gradient(135deg, var(--crimson) 0%, #6B0F0F 50%, var(--navy) 100%);
@@ -464,7 +500,7 @@
   <div class="hero-content">
     <div class="hero-badge"><div class="hero-badge-dot"></div><span>Welcoming All — Every Sunday</span></div>
     <h1>Jesus Inquires Anointing Tabernacle -<em>இயேசு விசாரிக்கிறார் அபிஷேகக் கூடாரம்</em></h1>
-    <p>Founded in 2025, Jesus Inquires Ministry is a Spirit-led organization with a singular, unwavering purpose — to bring every soul into the saving grace of Jesus Christ. Rooted in the truth of God's Word, we are passionately committed to our vision: that everyone may receive salvation and be fully prepared to meet Jesus Christ at His glorious second coming. We believe that this is not merely a mission, but an urgent call — a divine mandate to reach hearts, transform lives, and build a people who are holy, ready, and expectant. Through anointed teachings, fervent prayer, and faithful outreach, Jesus Inquires Ministry stands as a beacon of hope, guiding individuals from all walks of life into a deep, personal relationship with the Lord. We do not simply preach about Jesus — we inquire after Him, seek His presence, and invite every soul to do the same. Whether you are taking your first step of faith or deepening your walk with God, you have found a home here. Welcome to a ministry where eternity matters, and your soul is our priority.</p>
+    <p>Founded in 2023, Jesus Inquires Ministry is a Spirit-led organization with a singular, unwavering purpose — to bring every soul into the saving grace of Jesus Christ. Rooted in the truth of God's Word, we are passionately committed to our vision: that everyone may receive salvation and be fully prepared to meet Jesus Christ at His glorious second coming. We believe that this is not merely a mission, but an urgent call — a divine mandate to reach hearts, transform lives, and build a people who are holy, ready, and expectant. Through anointed teachings, fervent prayer, and faithful outreach, Jesus Inquires Ministry stands as a beacon of hope, guiding individuals from all walks of life into a deep, personal relationship with the Lord. We do not simply preach about Jesus — we inquire after Him, seek His presence, and invite every soul to do the same. Whether you are taking your first step of faith or deepening your walk with God, you have found a home here. Welcome to a ministry where eternity matters, and your soul is our priority.</p>
     <div class="hero-buttons">
       <a href="#services" class="btn-primary">View Service Times</a>
       <a href="#contact" class="btn-outline">Find Us</a>
@@ -569,7 +605,7 @@
       <div class="leader-card reveal" style="transition-delay:0.3s">
         <div class="leader-avatar">PD</div>
         <div class="leader-name">P Dhivakar david</div>
-        <div class="leader-role">co-Admin</div>
+        <div class="leader-role">Organizer</div>
       </div>
       </div>
     </div>
@@ -597,7 +633,7 @@
             <div class="event-time">⏰ 06:00 PM — JIAT Uppunelvoyal</div>
           </div>
         </div>
-        <div class="event-desc">Join thousands as we celebrate our anniversary day celebration with music, testimony, and a powerful message of hope.</div>
+        <div class="event-desc">Join thousands as we celebrate our anniversary day celebration with music (Worship Ps. E. Prakasam abraham), testimony (Mr. Ramesh khanna-cinema director), and a powerful message of hope (Ps. Muthukumar).</div>
       </div>
     </div>
     <div class="event-card reveal" style="transition-delay:0.1s">
@@ -618,11 +654,15 @@
   </div>
 </section>
 
-<div class="my section">
-  <h2>Disabled section</h2>
+    <section id="gallery">
+        <div class="gallery-container">
+            <div class="slider">
+                <img src="
 
 <!-- DONATE -->
 <section id="donate">
+    <div class="my section">
+  <h2>Disabled section</h2>
   <div class="donate-layout">
     <div>
       <div class="section-label">Support the Vision</div>
@@ -657,6 +697,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </section>
 
