@@ -481,7 +481,7 @@
   <a href="#hero" class="nav-logo">
     <img src="Picsart_26-02-25_12-29-11-788.png" alt="Jesus Inquires Ministry"
     style="height: 70px; width: auto;"/>
-    <span>Jesus Inquires Ministry<em>Church · Est. 2023<em>Reg. 2025</em></em></span>
+    <span>Easu Visarikkirar Uzhiyam<em>Church · Est. 2023<em>Reg. 2025</em></em></span>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -499,8 +499,8 @@
   <div class="hero-bg-cross"></div>
   <div class="hero-content">
     <div class="hero-badge"><div class="hero-badge-dot"></div><span>Welcoming All — Every Sunday</span></div>
-    <h1>Jesus Inquires Anointing Tabernacle -<em>இயேசு விசாரிக்கிறார் அபிஷேகக் கூடாரம்</em></h1>
-    <p>Founded in 2023, Jesus Inquires Ministry is a Spirit-led organization with a singular, unwavering purpose — to bring every soul into the saving grace of Jesus Christ. Rooted in the truth of God's Word, we are passionately committed to our vision: that everyone may receive salvation and be fully prepared to meet Jesus Christ at His glorious second coming. We believe that this is not merely a mission, but an urgent call — a divine mandate to reach hearts, transform lives, and build a people who are holy, ready, and expectant. Through anointed teachings, fervent prayer, and faithful outreach, Jesus Inquires Ministry stands as a beacon of hope, guiding individuals from all walks of life into a deep, personal relationship with the Lord. We do not simply preach about Jesus — we inquire after Him, seek His presence, and invite every soul to do the same. Whether you are taking your first step of faith or deepening your walk with God, you have found a home here. Welcome to a ministry where eternity matters, and your soul is our priority.</p>
+    <h1>இயேசு விசாரிக்கிறார் அபிஷேகக் கூடாரம் - <em>Jesus Inquires Anointing Tabernacle</em></h1>
+    <p>Founded in 2023, Easu Visarikkirar Uzhiyam is a Spirit-led organization with a singular, unwavering purpose — to bring every soul into the saving grace of Jesus Christ. Rooted in the truth of God's Word, we are passionately committed to our vision: that everyone may receive salvation and be fully prepared to meet Jesus Christ at His glorious second coming. We believe that this is not merely a mission, but an urgent call — a divine mandate to reach hearts, transform lives, and build a people who are holy, ready, and expectant. Through anointed teachings, fervent prayer, and faithful outreach, Jesus Inquires Ministry stands as a beacon of hope, guiding individuals from all walks of life into a deep, personal relationship with the Lord. We do not simply preach about Jesus — we inquire after Him, seek His presence, and invite every soul to do the same. Whether you are taking your first step of faith or deepening your walk with God, you have found a home here. Welcome to a ministry where eternity matters, and your soul is our priority.</p>
     <div class="hero-buttons">
       <a href="#services" class="btn-primary">View Service Times</a>
       <a href="#contact" class="btn-outline">Find Us</a>
@@ -574,7 +574,7 @@
       <div class="section-label">Who We Are</div>
       <h2 class="section-title">A Church Built on<br>Faith &amp; Love</h2>
       <p style="font-size:1.1rem; line-height:1.85; color: var(--text-mid); margin-bottom:24px;">
-        Since 2023, Jesus Inquires Anointing Tabernacle has been a beacon of hope in our village. We believe in the transforming power of Jesus Christ and the call to love every person who walks through our doors.
+        Since 2023, Easu Visarikkirar Abhishekha  koodaram has been a beacon of hope in our village. We believe in the transforming power of Jesus Christ and the call to love every person who walks through our doors.
       </p>
       <p style="font-size:1.05rem; line-height:1.85; color: var(--text-mid);">
         Our mission is simple: <em>Know God. Grow Together. Show His Love.</em> From outreach programs to small groups, we are committed to building a community where lives are changed.
@@ -657,9 +657,19 @@
     <section id="gallery">
         <div class="gallery-container">
             <div class="slider">
-                <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Baptism.jpg?raw=true" class="slide active">
+                <img src="JIM/Palm sunday worship.jpg" class="slide active">
+                <img src="JIM/Kids palm sunday.jpg" class="slide">
+                <img src="JIM/Outdoor gathering.jpg" class="slide">
+                <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Baptism.jpg?raw=true" class="slide">
+                <img src="JIM/Church believers tour.jpg" class="slide">
+                <img src="JIM/Women's day celebration.jpg" class="slide">
                 <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Children bible study.jpg?raw=true" class="slide">
+                <img src="JIM/Sunday school.jpg" class="slide">
+                <img src="JIM/Kids play-time.jpg" class="slide">
+                <img src="JIM/Pastor Ordination.jpg" class="slide">
             </div>
+        </div>
+    </section>
  <div class="my section">
   <h2>Disabled section</h2>
 <!-- DONATE -->
@@ -768,7 +778,28 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  
+    
+// Gallery slides
+                let slides=document.querySelectorAll(".alide");
+                let index=0;
+
+                function showSlide(i) {
+                    slides.forEach(slide=>slide.classList.remove("active"));
+                    slide[i].classLis.add("add");
+                }
+
+                function nextSlide() {
+                    index=(index+1)% slides.length;
+                    showSlide(index);
+                }
+
+                function prevSlide() {
+                    index=(index-1+slides.length)% slides.length;
+                    showSlide(index);
+                }
+                // Auto slideshow every 1 second
+                setInterval(nextSlide,1000);
+          
   // Donate amount selector
   function selectAmount(btn, val) {
     document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
@@ -793,28 +824,6 @@
     });
   });
   
-</script>
-            <script>
-                let slides=document.querySelectorAll(".alide");
-                let index=0;
-
-                function showSlide(i) {
-                    slides.forEach(slide=>slide.classList.remove("active"));
-                    slide[i].classLis.add("add");
-                }
-
-                function nextSlide() {
-                    index=(index+1)% slides.length;
-                    showSlide(index);
-                }
-
-                function prevSlide() {
-                    index=(index-1+slides.length)% slides.length;
-                    showSlide(index);
-                }
-                // Auto slideshow every 1 second
-                setInterval(nextSlide,1000);
-            </script>
-    
+</script>    
 </body>
 </html>
