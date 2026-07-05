@@ -1,1 +1,1 @@
-# JesusInquiresMinistry
+# EasuVisarikirarUzhiyangal
