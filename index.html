@@ -163,6 +163,24 @@
   .stat-num { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 900; color: var(--gold); display: block; }
   .stat-label { font-family: 'Lato', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
 
+        @keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+        
   /* ── SECTION SHARED ── */
   section { padding: 100px 5%; }
   .section-label {
@@ -254,7 +272,7 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.2);
   }
   .about-img-accent strong { display: block; font-size: 2.5rem; margin-bottom: 4px; }
-  .leaders-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+  .leaders-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
   .leader-card {
     background: white; border-radius: 8px; padding: 24px 20px; text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
@@ -768,7 +786,8 @@
   <div class="section-label">Our Moments</div>
   <h2 class="section-title light">Life at Easu Visarikirar Uzhiyangal</h2>
   <p class="section-sub light">10 captured moments of worship, community and God's grace in action — Uppunelvoyal, Ponneri.</p>
-         <div class="gallery-container" id="galContainer">
+         <div class="gallery-container" id="galContainer"
+             style="background:#060E1A;">
                <div class="gallery-progress" id="galProgress"></div>
  <div class="gallery-counter" id="galCounter">1 / 10</div>
               <div class="slider" id="galTrack">
@@ -783,8 +802,7 @@
         </div>
       </div>
  <div class="slide">
-        <img src="JIM/Kids palm sunday.jpg" alt="Kids Ministry"
-             onerror="this.style.background='#1a0a2e';this.style.height='480px'"/>
+        <img src="JIM/Kids palm sunday.jpg" alt="Kids Ministry" loading="eager"/>
         <div class="slide-caption">
           <span class="cap-num">02 / 10</span>
           <span class="cap-title">Corporate Prayer Night</span>
@@ -792,8 +810,7 @@
         </div>
       </div>
              <div class="slide">
-        <img src="JIM/Outdoor gathering.jpg" alt="Outdoor Gathering"
-             onerror="this.style.background='#0a1628';this.style.height='480px'"/>
+        <img src="JIM/Outdoor gathering.jpg" alt="Outdoor Gathering" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">03 / 10</span>
           <span class="cap-title">Our Church believer's outdoor Gathering</span>
@@ -801,8 +818,7 @@
         </div>
       </div>
              <div class="slide">
-        <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Baptism.jpg?raw=true" alt="Turning people to GOD"
-             onerror="this.style.background='#1a0a0a';this.style.height='480px'"/>
+        <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Baptism.jpg?raw=true" alt="Turning people to GOD" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">04 / 10</span>
           <span class="cap-title">Baptized &amp; With name of the Father, Son and Holy spirit</span>
@@ -810,8 +826,7 @@
         </div>
       </div>
               <div class="slide">
-        <img src="JIM/Church believers tour.jpg" alt="Vacation"
-             onerror="this.style.background='#0d1a2e';this.style.height='480px'"/>
+        <img src="JIM/Church believers tour.jpg" alt="Vacation" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">05 / 10</span>
           <span class="cap-title">Church Tour</span>
@@ -819,8 +834,7 @@
         </div>
       </div>
               <div class="slide">
-        <img src="JIM/Women's day celebration.jpg" alt="Women's Ministry"
-             onerror="this.style.background='#0a2010';this.style.height='480px'"/>
+        <img src="JIM/Women's day celebration.jpg" alt="Women's Ministry" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">06 / 10</span>
           <span class="cap-title">Women's Day</span>
@@ -828,26 +842,23 @@
         </div>
       </div>
              <div class="slide">
-        <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Children bible study.jpg?raw=true" alt="Children Ministry"
-             onerror="this.style.background='#1a1a0a';this.style.height='480px'"/>
+        <img src="https://github.com/Ste4199/JesusInquiresMinistry/blob/main/JIM/Children bible study.jpg?raw=true" alt="Children Ministry" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">07 / 10</span>
-          <span class="cap-title">Teaching Descipline life with word of GOD</span>
-          <span class="cap-sub">Children are more blessed, While we teach them a GOD fear in this time definitely their future will be more brighter than stars</span>
+          <span class="cap-title">Teaching God's words</span>
+          <span class="cap-sub">Helping to improve their life bright like a star</span>
         </div>
       </div>
               <div class="slide">
-        <img src="JIM/Sunday school.jpg" alt="Sunday School"
-             onerror="this.style.background='#0a1020';this.style.height='480px'"/>
+        <img src="JIM/Sunday school.jpg" alt="Sunday School" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">08 / 10</span>
           <span class="cap-title">Sunday School</span>
-          <span class="cap-sub">Kids are exicited to play with JESUS CHRIST so we are preparing them</span>
+          <span class="cap-sub">Preparing kids to be built his kingdom</span>
         </div>
       </div>
               <div class="slide">
-        <img src="JIM/Church Anniversary 2026.jpeg" alt="Church Anniversary"
-             onerror="this.style.background='#200a0a';this.style.height='480px'"/>
+        <img src="JIM/Church Anniversary 2026.jpeg" alt="Church Anniversary" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">09 / 10</span>
           <span class="cap-title">Church Anniversary Celebration-2026</span>
@@ -855,8 +866,7 @@
         </div>
       </div>
              <div class="slide">
-        <img src="JIM/Pastor Ordination.jpg" alt="Other Moments"
-             onerror="this.style.background='#10200a';this.style.height='480px'"/>
+        <img src="JIM/Pastor Ordination.jpg" alt="Other Moments" loading="lazy"/>
         <div class="slide-caption">
           <span class="cap-num">10 / 10</span>
           <span class="cap-title">Pastor's Ordination</span>
@@ -1151,6 +1161,134 @@
       a.style.color = a.getAttribute('href') === '#' + curr ? 'var(--gold)' : '';
     });
   });
+
+    (function() {
+  var GAL_TOTAL = 10;
+  var galCur = 0, galAuto = true, galTimer = null;
+  var galSpeed = 3000, galStartX = 0;
+
+  var wrap     = document.getElementById('galContainer');
+  var track    = document.getElementById('galTrack');
+  var dotsBox  = document.getElementById('galDots');
+  var thumbBox = document.getElementById('galThumbs');
+  var counter  = document.getElementById('galCounter');
+  var progress = document.getElementById('galProgress');
+  var autoBtn  = document.getElementById('galAutoBtn');
+  var speedSel = document.getElementById('galSpeedSel');
+
+  if (!wrap || !track) { return; }
+
+  var imgs = track.querySelectorAll('.slide img');
+
+  /* Build dots */
+  for (var i = 0; i < GAL_TOTAL; i++) {
+    var dot = document.createElement('button');
+    dot.className = 'gdot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+    dot.onclick = (function(n){ return function(){ galGoTo(n); }; })(i);
+    dotsBox.appendChild(dot);
+  }
+
+  /* Build thumbnails */
+  imgs.forEach(function(img, i) {
+    var div = document.createElement('div');
+    div.className = 'gallery-thumb' + (i === 0 ? ' active' : '');
+    var t = document.createElement('img');
+    t.src = img.src; t.alt = img.alt; t.loading = 'lazy';
+    div.appendChild(t);
+    div.onclick = (function(n){ return function(){ galGoTo(n); }; })(i);
+    thumbBox.appendChild(div);
+  });
+
+  /* Go to slide */
+  function galGoTo(idx) {
+    galCur = ((idx % GAL_TOTAL) + GAL_TOTAL) % GAL_TOTAL;
+    track.style.transform = 'translateX(-' + (galCur * 100) + '%)';
+    if (counter) counter.textContent = (galCur + 1) + ' / ' + GAL_TOTAL;
+    dotsBox.querySelectorAll('.gdot').forEach(function(d, i) {
+      d.classList.toggle('active', i === galCur);
+    });
+    thumbBox.querySelectorAll('.gallery-thumb').forEach(function(t, i) {
+      t.classList.toggle('active', i === galCur);
+    });
+    if (progress) {
+      progress.style.transition = 'none';
+      progress.style.width = '0%';
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          progress.style.transition = 'width ' + galSpeed + 'ms linear';
+          progress.style.width = '100%';
+        });
+      });
+    }
+  }
+
+  /* Prev / Next */
+  window.galMove = function(dir) {
+    galGoTo(galCur + dir);
+    if (galAuto) { clearInterval(galTimer); galStart(); }
+  };
+
+  /* Auto-play */
+  function galStart() {
+    galTimer = setInterval(function() { galGoTo(galCur + 1); }, galSpeed);
+  }
+  function galStop() {
+    clearInterval(galTimer); galTimer = null;
+    if (progress) { progress.style.transition='none'; progress.style.width='0%'; }
+  }
+
+  /* Toggle auto */
+  window.galToggleAuto = function() {
+    galAuto = !galAuto;
+    if (galAuto) { galStart(); if (autoBtn) autoBtn.textContent = '⏸ Pause'; }
+    else         { galStop();  if (autoBtn) autoBtn.textContent = '▶ Resume'; }
+  };
+
+  /* Speed change */
+  window.galChangeSpeed = function() {
+    if (speedSel) galSpeed = parseInt(speedSel.value, 10);
+    if (galAuto) { galStop(); galStart(); }
+  };
+
+  /* Pause on hover */
+  wrap.addEventListener('mouseenter', function() { if (galAuto) galStop(); });
+  wrap.addEventListener('mouseleave', function() { if (galAuto) galStart(); });
+
+  /* Touch swipe */
+  wrap.addEventListener('touchstart', function(e) {
+    galStartX = e.touches[0].clientX;
+  }, { passive: true });
+  wrap.addEventListener('touchend', function(e) {
+    var diff = galStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) window.galMove(diff > 0 ? 1 : -1);
+  });
+
+  /* Keyboard arrows */
+  document.addEventListener('keydown', function(e) {
+    var tag = document.activeElement ? document.activeElement.tagName : '';
+    if (tag === 'INPUT' || tag === 'SELECT') return;
+    if (e.key === 'ArrowLeft')  window.galMove(-1);
+    if (e.key === 'ArrowRight') window.galMove(1);
+  });
+
+  /* Scroll reveal */
+  if (typeof IntersectionObserver !== 'undefined') {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      obs.observe(el);
+    });
+  }
+
+  /* Init */
+  galGoTo(0);
+  galStart();
+
+})();
   
 </script>    
 </body>
